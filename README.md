@@ -1,5 +1,5 @@
 # enqueue_xh
-This plugin is to use the familiar WordPress Enqueue System in CMSimple_XH.  
+This plugin is to use the familiar <a href="https://www.google.co.jp/search?q=+Add+JavaScripts+and+Styles++WordPress&ie=utf-8&oe=utf-8&hl=ja#hl=ja&q=Add+JavaScripts+and+Styles++WordPress+enqueue" target="_blank">WordPress Enqueue System</a> in CMSimple_XH.  
 
 Requirements  
   hook_xh https://github.com/bbfriend/hook_xh is must be installed before　

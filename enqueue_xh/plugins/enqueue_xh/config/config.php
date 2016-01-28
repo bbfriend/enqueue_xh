@@ -1,5 +1,5 @@
 <?php
 
-$plugin_cf['enqueue_xh']['enqueue_jqurey']="false";
+$plugin_cf['enqueue_xh']['enqueue_jqurey']="true";
 
 ?>

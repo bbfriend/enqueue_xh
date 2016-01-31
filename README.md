@@ -25,3 +25,5 @@ Requirements
  style_is( $handle, $list = 'enqueued' )  
  style_add_data( $handle, $key, $value )  
  
+Forum:http://cmsimpleforum.com/viewtopic.php?f=29&t=9878
+ 

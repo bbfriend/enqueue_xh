@@ -2,8 +2,15 @@
 This plugin is to use the familiar <a href="https://www.google.co.jp/search?q=+Add+JavaScripts+and+Styles++WordPress&ie=utf-8&oe=utf-8&hl=ja#hl=ja&q=Add+JavaScripts+and+Styles++WordPress+enqueue" target="_blank">WordPress Enqueue System</a> in CMSimple_XH.  
 
 Requirements (First to the installation)   
-  hook_xh https://github.com/bbfriend/hook_xh   　
+  hook_xh https://github.com/bbfriend/hook_xh   
+
+#### Ver0.4 Mistake modification of release files   
+#### Ver0.2 First release   
   
+### Include Sample Plugin: dynamic_to_top_xh  
+*Adds an automatic and dynamic "To Top" button in CMSimple_XH.  
+Original: <a href="https://wordpress.org/plugins/dynamic-to-top/">wordpress Dynamic "To Top" Plugin</a>  
+
 ## Function List  
  print_scripts( $handles = false )  
  register_script( $handle, $src, $deps = array(), $ver = false, $in_footer = false )  

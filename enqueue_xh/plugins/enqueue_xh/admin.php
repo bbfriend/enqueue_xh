@@ -103,7 +103,7 @@ function Enqueue_Xh_systemCheck()
     $o .= tag('br') . (@isset($xh_styles)  ? $ok : $warn)
         . '&nbsp;&nbsp;' . 'BackPress Styles Procedural API' . PHP_EOL;
     $o .= tag('br') . (@isset($hooks)  ? $ok : $warn)
-        . '&nbsp;&nbsp;' . 'Hook_XH (Not Required. Recommendation)' . PHP_EOL;
+        . '&nbsp;&nbsp;' . 'Hook_XH ( Required.)' . PHP_EOL;
 
 
     $o .= tag('br') . (strtoupper($tx['meta']['codepage']) == 'UTF-8' ? $ok : $warn)

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: enqueue_xh
  * Description: Enqueue System
- * Version:    0.2
+ * Version:    0.4
  * Build:      20151225
  * Copyright:  Takashi Uchiyama
  * Website:    http://cmsimple-jp.org
@@ -14,7 +14,7 @@ if (!defined('CMSIMPLE_XH_VERSION')) {
 /**
  * The plugin version.
  */
-define('ENQUEUE_XH_VERSION', '0.2');
+define('ENQUEUE_XH_VERSION', '0.4');
 
 
 

@@ -147,9 +147,13 @@ function deregister_script( $handle ) {
 	 * Show minimal remorse if the correct hook is used.
 	 */
 	$current_filter = current_filter();
-	if ( ( is_admin() && 'admin_enqueue_scripts' !== $current_filter ) ||
+//	if ( ( is_admin() && 'admin_enqueue_scripts' !== $current_filter ) ||
+//		( 'wp-login.php' === $GLOBALS['pagenow'] && 'login_enqueue_scripts' !== $current_filter )
+//	) {
+	if ( ( XH_ADM && 'admin_enqueue_scripts' !== $current_filter ) ||
 		( 'wp-login.php' === $GLOBALS['pagenow'] && 'login_enqueue_scripts' !== $current_filter )
 	) {
+
 		$no = array(
 			'jquery', 'jquery-core', 'jquery-migrate', 'jquery-ui-core', 'jquery-ui-accordion',
 			'jquery-ui-autocomplete', 'jquery-ui-button', 'jquery-ui-datepicker', 'jquery-ui-dialog',
@@ -161,8 +165,8 @@ function deregister_script( $handle ) {
 
 		if ( in_array( $handle, $no ) ) {
 			$message = sprintf( __( 'Do not deregister the %1$s script in the administration area. To target the frontend theme, use the %2$s hook.' ),
-				"<code>$handle</code>", '<code>wp_enqueue_scripts</code>' );
-			_doing_it_wrong( __FUNCTION__, $message, '3.6' );
+				"<code>$handle</code>", '<code>enqueue_scripts</code>' );
+//			_doing_it_wrong( __FUNCTION__, $message, '3.6' );
 			return;
 		}
 	}

@@ -84,7 +84,7 @@ class XH_Style extends Dependencies {
 		}
 
 		if ( isset($obj->args) )
-			$media = esc_attr( $obj->args );
+			$media = xh_esc_attr( $obj->args );
 		else
 			$media = 'all';
 
@@ -94,7 +94,7 @@ class XH_Style extends Dependencies {
 			return true;
 		}
 		$rel = isset($obj->extra['alt']) && $obj->extra['alt'] ? 'alternate stylesheet' : 'stylesheet';
-		$title = isset($obj->extra['title']) ? "title='" . esc_attr( $obj->extra['title'] ) . "'" : '';
+		$title = isset($obj->extra['title']) ? "title='" . xh_esc_attr( $obj->extra['title'] ) . "'" : '';
 
 		/**
 		 * Filter the HTML link tag of an enqueued style.
@@ -135,7 +135,7 @@ class XH_Style extends Dependencies {
 			$this->print_html .= $conditional_pre;
 			$this->print_html .= $tag;
 			if ( $inline_style = $this->print_inline_style( $handle, false ) ) {
-				$this->print_html .= sprintf( "<style id='%s-inline-css' type='text/css'>\n%s\n</style>\n", esc_attr( $handle ), $inline_style );
+				$this->print_html .= sprintf( "<style id='%s-inline-css' type='text/css'>\n%s\n</style>\n", xh_esc_attr( $handle ), $inline_style );
 			}
 			$this->print_html .= $conditional_post;
 		} else {
@@ -185,7 +185,7 @@ class XH_Style extends Dependencies {
 			return $output;
 		}
 
-		printf( "<style id='%s-inline-css' type='text/css'>\n%s\n</style>\n", esc_attr( $handle ), $output );
+		printf( "<style id='%s-inline-css' type='text/css'>\n%s\n</style>\n", xh_esc_attr( $handle ), $output );
 
 		return true;
 	}
@@ -224,7 +224,7 @@ class XH_Style extends Dependencies {
 		}
 
 		if ( !empty($ver) )
-			$src = add_query_arg('ver', $ver, $src);
+			$src = xh_add_query_arg('ver', $ver, $src);
 
 		/**
 		 * Filter an enqueued style's fully-qualified URL.

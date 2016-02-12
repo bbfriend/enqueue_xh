@@ -30,7 +30,7 @@ function head()
 
  /** Add Enqueue_xh St.******/
 //	This is Use Hook_XH .
-//	do_action( 'enqueue_scripts' );
+	do_action( 'enqueue_scripts' );
 
 	ob_start();
 		print_styles();

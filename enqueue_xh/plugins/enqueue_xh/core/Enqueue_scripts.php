@@ -91,7 +91,7 @@ class XH_Script extends Dependencies {
 	 * @return bool|string|void
 	 */
 	public function print_scripts_l10n( $handle, $echo = true ) {
-		_deprecated_function( __FUNCTION__, '3.3', 'print_extra_script()' );
+//		_deprecated_function( __FUNCTION__, '3.3', 'print_extra_script()' );
 		return $this->print_extra_script( $handle, $echo );
 	}
 
@@ -192,7 +192,7 @@ class XH_Script extends Dependencies {
 		}
 
 		if ( ! empty( $ver ) )
-			$src = add_query_arg( 'ver', $ver, $src );
+			$src = xh_add_query_arg( 'ver', $ver, $src );
 
 		/** This filter is documented in wp-includes/class.wp-scripts.php */
 //		$src = esc_url( apply_filters( 'script_loader_src', $src, $handle ) );
